@@ -1,4 +1,5 @@
 "use client";
+import * as React from "react";
 
 import {
   useSessionContext,
@@ -16,6 +17,13 @@ const AuthModal = () => {
   const { session } = useSessionContext();
   const { onClose, isOpen } = useAuthModal();
 
+  React.useEffect(() => {
+    if (session) {
+      router.refresh();
+      onClose();
+    }
+  }, [session, router, onClose]);
+
   const onChange = (open: boolean) => {
     if (!open) {
       onClose();
@@ -27,7 +35,7 @@ const AuthModal = () => {
       title="Welcome back"
       description="Login to your account"
       isOpen={isOpen}
-      onChange={onChange }
+      onChange={onChange}
     >
       <Auth
         theme="dark"
