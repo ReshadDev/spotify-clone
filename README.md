@@ -2,6 +2,10 @@
 
 For DEMO, use [Stripe Testing Cards](https://stripe.com/docs/testing)
 
+## Screenshots
+![image](https://github.com/ReshadDev/spotify-clone/assets/94470623/c441837b-b838-4aab-90f6-c328728942ae)
+
+
 Key Features:
 
 - Song upload
